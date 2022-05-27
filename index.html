@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="array-parameters">
+          <p>Size of the array :</p>
+          <input
+            id="array_size"
+            type="range"
+            min="20"
+            max="150"
+            step="1"
+            value="80"
+          />
+          <p>Speed of the algorithm :</p>
+          <input
+            id="array_speed"
+            type="range"
+            min="1"
+            max="5"
+            step="1"
+            value="4"
+          />
+          <button id="array_generate">Generate New Array</button>
+        </div>
+        <div class="header__right">
+          <p class="nav__heading">Sorting Visualizer</p>
+          <div class="algos">
+            <button>Bubble</button>
+            <button>Selection</button>
+            <button>Insertion</button>
+            <button>Merge</button>
+            <button>Quick</button>
+            <button>Heap</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div id="Info__Container1">
+        <h3>TIME COMPLEXITY</h3>
+        <div
+          class="Complexity__Containers"
+          id="Time__Complexity__Types__Container"
+        >
+          <div class="Pair__Definitions">
+            <p class="Sub__Heading">Worst case:</p>
+            <p id="Worst__Time"></p>
+          </div>
+
+          <div class="Pair__Definitions">
+            <p class="Sub__Heading">Average case:</p>
+            <p id="Average__Time"></p>
+          </div>
+
+          <div class="Pair__Definitions">
+            <p class="Sub__Heading">Best case:</p>
+            <p id="Best__Time"></p>
+          </div>
+        </div>
+      </div>
+      <div class="Array__Container"></div>
+      <div id="Info__Cont2">
+        <h3>SPACE COMPLEXITY</h3>
+        <div
+          class="Complexity__Containers"
+          id="Space__Complexity__Types__Container"
+        >
+          <div class="Pair_Definitions">
+            <p class="Sub_Heading">Worst case:</p>
+            <p id="Space_Worst"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
