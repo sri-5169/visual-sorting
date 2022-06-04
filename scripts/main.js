@@ -10,6 +10,9 @@ var margin_size;
 var container_for_array = document.getElementById("Array_Container");
 container_for_array.style = "flex-direction : row";
 // formulate  Generate array and update frunctions  here
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 function generate_array() {
   container_for_array.innerHTML = "";
 
@@ -24,12 +27,16 @@ function generate_array() {
     divs[i].style =
       " margin:0% " +
       margin_size +
-      "%; background-color:blue; width:" +
+      `%;transition: height ${
+        10000 / input_algo_speed
+      } ease-in-out; background-color:blue; width:` +
       (100 / array_size - 2 * margin_size) +
       "%; height:" +
       div_sizes[i] +
       "%;";
+    // await sleep(100);
   }
+  // await sleep(100);
 }
 
 function update_array_size() {
@@ -48,7 +55,7 @@ function runalgo() {
     case "Bubble":
       Bubble_sort();
       break;
-    case "Optimised_Bubble_Sort":
+    case "Optimised_Bubble":
       Optimised_Bubble_sort();
       break;
     case "Selection":

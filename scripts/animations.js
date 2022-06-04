@@ -21,7 +21,6 @@ function visualization_speed() {
   }
   delay_time = 10000 / (Math.floor(array_size / 10) * speed);
 }
-
 var delay_time = 10000 / (Math.floor(array_size / 10) * speed);
 var c_delay = 0;
 
