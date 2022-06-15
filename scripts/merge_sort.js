@@ -6,8 +6,17 @@ function Merge_sort() {
   document.getElementById("Worst_Space").innerText = "O(N)";
 
   c_delay = 0;
+  const startTime = performance.now();
   merge_partition(0, array_size - 1);
-  //   enable_buttons();
+  const endTime = performance.now();
+  console.log(Math.round(endTime - startTime));
+  setTimeout(
+    (document.getElementById("time_taken").innerText = `${Math.round(
+      endTime - startTime
+    )} milliseconds`),
+    endTime - startTime
+  );
+  enable_buttons();
 }
 function merge(start, mid, end) {
   var p = start,

@@ -9,31 +9,36 @@
   </head>
   <body>
     <header>
+      <p class="nav_heading">Sorting Visualizer</p>
       <nav>
-        <div class="array-parameters">
-          <p>Size of the array :</p>
-          <input
-            id="array_size"
-            type="range"
-            min="20"
-            max="150"
-            step="1"
-            value="80"
-          />
-          <p>Speed of the algorithm :</p>
-          <input
-            id="algo_speed"
-            type="range"
-            min="1"
-            max="5"
-            step="1"
-            value="4"
-          />
+        <div class="inputs">
+          <div class="array-parameters">
+            <div>
+              <p>Size of the array :</p>
+              <input
+                id="array_size"
+                type="range"
+                min="20"
+                max="150"
+                step="1"
+                value="80"
+              />
+            </div>
+            <div>
+              <p>Speed of the algorithm :</p>
+              <input
+                id="algo_speed"
+                type="range"
+                min="1"
+                max="5"
+                step="1"
+                value="4"
+              />
+            </div>
+          </div>
           <button id="array_generate">Generate New Array</button>
-          <button id="pause_button">Pause/Play</button>
         </div>
         <div class="header_right">
-          <p class="nav_heading">Sorting Visualizer</p>
           <div class="algos">
             <button>Bubble</button>
             <button>Optimised_Bubble</button>
@@ -75,6 +80,10 @@
             <p class="Sub_Heading">Worst case:</p>
             <p id="Worst_Space"></p>
           </div>
+          <div class="Pair_Definitions">
+            <p class="Sub_Heading">Time Taken:</p>
+            <p id="time_taken"></p>
+          </div>
         </div>
       </div>
     </section>
@@ -86,5 +95,6 @@
     <script src="./scripts/optimised_bubble_sort.js"></script>
     <script src="./scripts/merge_sort.js"></script>
     <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
   </body>
 </html>

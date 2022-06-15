@@ -6,153 +6,136 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+  header {
+    background-color: #3b3a3a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+  #array_generate{
+    border-radius: 1rem;
+    color : blue;
+    padding : 1rem
+  }
   nav {
     background-color: #3b3a3a;
     color: white;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 30% 60%;
-        grid-template-columns: 30% 60%;
-    -webkit-column-gap: 10%;
-            column-gap: 10%;
-    padding: 0% 5%;
-  }
-  
-  nav .array-inputs {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 60% 40%;
-        grid-template-columns: 60% 40%;
-    place-content: center;
-    padding: 5% 0%;
-  }
-  
-  nav .array-inputs #a_size {
-    padding: 5% 0%;
-  }
-  
-  nav .array-inputs #a_speed {
-    padding: 5% 0%;
-  }
-  
-  nav .array-inputs #a_generate {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 4% 0% 0% 0%;
-    padding-left: 20%;
-  }
-  
-  nav .array-inputs #a_generate:hover {
-    cursor: pointer;
-  }
-  
-  nav .header_right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
-  
-  nav .header_right .nav-heading {
+  .nav_heading{
+    font-size: xx-large;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .array-parameters {
+    display: flex;
+    justify-content: center;
+  }
+  .array-parameters >  div {
+    margin : 1rem;
+  }
+  .array-parameters > div > input{
+    margin : 1rem;
+  }
+
+  .header_right{
     display: inline-block;
     font-size: xxx-large;
     padding: 3% 0%;
   }
-  
-
-  nav .header_right .algos button {
+ .algos button {
     background-color: transparent;
     border: none;
     color: white;
+    border-radius : 1rem;
     outline: none;
-    padding: 5% 0%;
-    font-size: x-large;
+    padding: 1rem 1rem;
+    margin : 1rem 1rem;
   }
-  
-  nav .header_right .algos button:hover {
-    background-color: blue;
+ .algos > button:hover {
+    background-color: #757373;
     cursor: pointer;
   }
-  
-  nav .header_right .algos .butt_locked {
+  .locked_button {
     background-color: transparent;
     cursor: pointer;
   }
-  
-  nav .header_right .algos .butt_locked:hover {
+  .locked_button:hover {
     background-color: transparent;
     cursor: pointer;
   }
-  
-  nav .header_right .algos .butt_selected {
+  .algobutton_selected {
     background-color: white;
     color: green;
   }
-  
-  nav .header_right .algos .butt_selected:hover {
+  .algobutton_selected:hover {
     background-color: white;
     cursor: pointer;
   }
-  
-  nav .header_right .algos .butt_unselected:hover {
+  .algobutton_unselected:hover {
     background-color: blue;
     cursor: pointer;
   }
-  
   section {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 20% 60% 20%;
-        grid-template-columns: 20% 60% 20%;
+        display: flex;
+        justify-content:space-around;
   }
-  
-  section .Complexity_Containers {
+  @media screen and (max-width:600px) {
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #Array_Container{
+        align-self: flex-start;
+        width: 100% !important;
+      }
+  }  
+  .Complexity_Containers {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+  .Complexity_Containers .Pair_Definitions {
     margin-top: 20%;
   }
   
-  section .Complexity_Containers .Pair_Definitions {
-    margin-top: 20%;
-  }
-  
-  section .Complexity_Containers .Pair_Definitions p {
+  .Complexity_Containers .Pair_Definitions p {
     display: inline;
   }
   
-  section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  .Complexity_Containers .Pair_Definitions p.Sub_Heading {
     font-size: medium;
     text-transform: none;
   }
   
-  section #Info_Cont1 {
+   #Info_Cont1 {
     padding: 20% 10%;
   }
   
-  section #Info_Cont1 h3 {
+   #Info_Cont1 h3 {
     text-decoration: underline;
   }
   
-  section #Array_Container {
-    display: -webkit-box;
-    display: -ms-flexbox;
+   #Array_Container {
     display: flex;
-    width: 100%;
+    align-items: baseline;
+    width: 60%;
     height: 70vh;
   }
   /* #Array_Container > div {
       transition: height 0.08s ease-in-out;
   } */
   
-  section #Info_Cont2 {
+   #Info_Cont2 {
     padding: 20% 10%;
   }
   
-  section #Info_Cont2 h3 {
+   #Info_Cont2 h3 {
     text-decoration: underline;
   }
   

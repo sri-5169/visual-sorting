@@ -5,6 +5,7 @@ function Bubble_sort() {
   document.getElementById("Worst_Space").innerText = "O(1)";
 
   c_delay = 0;
+  const startTime = performance.now();
   for (var i = 0; i < array_size; i++) {
     for (var j = 0; j < array_size - i - 1; j++) {
       div_update(divs[j], div_sizes[j], "yellow"); // Color Update
@@ -26,6 +27,14 @@ function Bubble_sort() {
     div_update(divs[j], div_sizes[j], "green");
   }
   div_update(divs[0], div_sizes[0], "green");
+  const endTime = performance.now();
+  console.log(Math.round(endTime - startTime));
+  setTimeout(
+    (document.getElementById("time_taken").innerText = `${Math.round(
+      endTime - startTime
+    )} milliseconds`),
+    endTime - startTime
+  );
   // enable the disabled buttons
-  // enable_buttons();
+  enable_buttons();
 }
