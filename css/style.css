@@ -142,3 +142,13 @@
   .hide {
     display: none;
   }
+  .githubIcon{
+    height : 5rem;
+    width : 5rem;
+    margin-left: auto;
+    
+  }
+  .heading{
+    display: flex;
+    align-items: center;
+  }

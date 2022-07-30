@@ -23,14 +23,11 @@ function partition(start, end) {
   for (var j = start + 1; j <= end; j++) {
     //re-arrange the array by putting elements which are less than pivot on one side and which are greater that on other.
     if (div_sizes[j] < piv) {
-      // div_update(divs[j], div_sizes[j], "yellow"); //Color update
       div_update(divs[i], div_sizes[i], "red"); //Color update
       div_update(divs[j], div_sizes[j], "red"); //Color update
       var temp = div_sizes[i];
       div_sizes[i] = div_sizes[j];
       div_sizes[j] = temp;
-      // div_update(divs[i], div_sizes[i], "red"); //Height update
-      // div_update(divs[j], div_sizes[j], "red"); //Height updat
       div_update(divs[i], div_sizes[i], "blue"); //Height update
       div_update(divs[j], div_sizes[j], "blue"); //Height update
       i += 1;
